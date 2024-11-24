@@ -2,20 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Phonk-Contrast";
+  src: url("./fonts/phonk-contrast.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
+@font-face {
+  font-family: "Phonk-Regular";
+  src: url("./fonts/phonk-regular.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ff3131; /* Color de fondo */
+    --foreground: #fceccb; /* Color de texto */
+    --primary: #ff3131;
+    --primary-foreground: #fceccb;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .dark {
+    --background: #ff3131;
+    --foreground: #fceccb;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-image: url('../public/grain-bg.svg'); 
+    background-attachment: fixed;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    @apply bg-[var(--background)] text-[var(--foreground)];
+    font-family: 'Phonk-Contrast', sans-serif;
+    font-family: 'Phonk-Regular', sans-serif;
+  }
 }
