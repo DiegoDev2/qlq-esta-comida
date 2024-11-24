@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import NumberTicker from "@/components/ui/number-ticker";
 export default function Pepsi() {
   return (
     <main className="h-screen max-w-screen-2xl flex items-center justify-center relative overflow-hidden">
