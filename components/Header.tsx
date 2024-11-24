@@ -7,6 +7,8 @@ export default function Header() {
           <Image
             src="/LogoQLQ.jpg"
             alt="Logo QLQ"
+            width={100}
+            height={100}
             className="h-14 w-auto object-contain rounded-md opaci"
           />
         </div>
