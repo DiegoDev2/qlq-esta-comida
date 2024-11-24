@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   description: "Hablo mamaguebadas y hago reviews de comida",
   icons: {
     icon: "/QLQ.webp",
-
   },
 };
 
